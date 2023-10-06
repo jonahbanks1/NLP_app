@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>NLP app using FastAPI</title>
+  
+  
+</head>
+<style>
+
+
+  
+body {
+    background-image: url("{{ url_for('static', path='site_img.JPG') }}");
+
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: 60% ;
+  }
+
+
+  .prediction{
+    margin: 0;
+
+   position: absolute;
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+
+   top:30%;
+   left: 50%;
+  font-size:40px;
+  color:rgb(255, 255, 255);
+  background-color:rgb(18, 142, 70);
+
+
+
+  }
+  .search_bn {
+   margin: 0;
+   position: absolute;
+   top: 15%;
+   left: 65%;
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+   color:rgb(0, 0, 0);
+
+  }
+  .SearchBar {
+   height: 7%;
+   width: 25%;
+   position: absolute;
+   top: 15%;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+   font-size:20px;  
+
+  }
+ h1{
+  text-align:center;
+  color:rgb(18, 142, 70)
+ }
+</style>
+
+<body>
+	<div ><h1> NLP app using FastAPI and Jinja </h1></div>
+
+ <div >
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="/predict"  method="post">
+    	<input   class='SearchBar'  type="text" name="text" placeholder="Enter your sentence here!" required="required" />
+      
+	
+
+        <button  class='search_bn'  type="submit" class="btn btn-primary btn-block btn-large" rows="1" cols="50">Go!</button>
+        
+
+
+    </form>
+
+    
+    <form action="/predict"  method="post">
+    	<input   class='SearchBar'  type="text" name="text" placeholder="Enter your text here!" required="required" />
+      
+	
+
+        <button  class='search_bn'  type="submit" class="btn btn-primary btn-block btn-large" rows="1" cols="50">Go!</button>
+        
+
+
+    </form>
+  </div >
+    <div class='prediction' >  The emotion of the text is :{{ data }}  </div> 
+
+
+   <br>
+
+
+
+
+</body>
+</html>
