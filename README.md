@@ -9,3 +9,7 @@ This pickle file is loaded by the site and used at the backend to process incomi
 the model was trained using an Amazon reviews dataset. 
 
 
+![Uploading NLP app using FastAPI and 4 more pages - Personal - Microsoft​ Edge 12_7_2023 10_07_00 AM.png…]()
+
+
+
